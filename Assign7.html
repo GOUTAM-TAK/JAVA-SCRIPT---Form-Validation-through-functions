@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CANDIDATE FORM</title>
+    <script src="./cssfile/validation.js"></script>
+    <link rel="stylesheet" href="./cssfile/stylesheet.css">
+</head>
+
+<body>
+    <table>
+        <TH>
+            CANDIDATE FORM
+        </TH>
+        <TR>
+            <TD><label for="fnm">First Name:</label></TD>
+            <TD><input type="text" name="fnm" id="fnm" required autofocus placeholder="ENTER FIRST NAME" minlength="3"
+                    maxlength="20" />
+                <span id="errfnm"></span>
+            </TD>
+        </TR>
+        <tr>
+            <td> <label for="lnm"> Last Name:</label> </td>
+            <td><input type="text" name="lnm" id="lnm" required autofocus placeholder="Enter Last Name" minlength="3"
+                    maxlength="20" /> <span id="errlnm"></span></td>
+
+        </tr>
+        <tr>
+            <td><label for="dob">Date of Birth:</label></td>
+            <td><input type="date" required id="dob" name="dob" max="01-01-2002" />
+                <span id="errdob"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <lable for="male">Gender:</lable>
+            </td>
+            <td><input type="radio" name="gender" id="male" value="male"><label for="male">MALE</label>
+                <input type="radio" name="gender" id="femal" value="female"><label for="female">FEMALE</label>
+                <input type="radio" name="gender" id="others" value="others"><label for="others">OTHERS</label>
+                <span id="errgen"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="Phone"> Mobile number</label> </td>
+            <td><input type="text" name="mobile" id="mobile" required pattern="[9876][0-9]{9}" />
+            <span id="errmob"></span>
+            </td>
+        </tr>
+        <tr>
+            <td> <label for="email"> email </label></td>
+            <td><input type="email" name="email" id="email" required />
+                <span id="errema"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="password">Password :</label></td>
+            <td><input type="password" name="password" id="password" required>
+                <span id="errpass"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="address">Address:</label></td>
+            <td><textarea id="address" name="address" required maxlength="200" minlength="5" cols="30"></textarea>
+            <span id="erradd"></span></td>
+        </tr>
+        <tr>
+            <TD><label for="consituiency">consituiency:</label></TD>
+            <td><select id="consituiency" name="consituiency" required size="1">
+                    <option value="select any one">----select-text----</option>
+                    <option value="ward1">WARD1</option>
+                    <option value="ward1">WARD2</option>
+                    <option value="ward1">WARD3</option>
+                    <option value="ward1">WARD4</option>
+                    <option value="ward1">WARD5</option>
+                    <option value="ward1">WARD6</option>
+                    <option value="ward1">WARD7</option>
+                </select>
+            <span id="errcon"></span></td>
+        </tr>
+        <tr>
+            <TD><label for="partyName">Party Name:</label></TD>
+            <td><select id="partyName" name="partyName" required size="1">
+                    <option value="select any one">----select-text----</option>
+                    <option value="ward1">Congress</option>
+                    <option value="ward1">BJP</option>
+                    <option value="ward1">AAP</option>
+                    <option value="ward1">SP</option>
+                    <option value="ward1">TMC</option>
+                    <option value="ward1">BSP</option>
+                    <option value="ward1">Others</option>
+                </select></td>
+            <td><span id="errcon"></span></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="submit" value="Register" onclick="ValidateForm()"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
